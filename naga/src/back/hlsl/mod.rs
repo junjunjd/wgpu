@@ -355,6 +355,19 @@ pub enum Error {
     Override,
 }
 
+enum WrapperFunction {
+    ZeroValues,
+    ArrayLength,
+    ImageQueries,
+    ImageLoadScalars,
+    Constructors,
+    StructMatrixAccess,
+    MatCx2s,
+    Math,
+    SamplerHeaps,
+    SamplerIndexBuffers,
+}
+
 #[derive(Default)]
 struct Wrapped {
     zero_values: crate::FastHashSet<help::WrappedZeroValue>,
